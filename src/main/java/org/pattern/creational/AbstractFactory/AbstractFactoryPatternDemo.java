@@ -1,3 +1,5 @@
+// Abstract factory is factory of factories
+
 package org.pattern.creational.AbstractFactory;
 
 public class AbstractFactoryPatternDemo {

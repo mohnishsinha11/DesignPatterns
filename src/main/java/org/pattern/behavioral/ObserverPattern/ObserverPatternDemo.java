@@ -1,3 +1,4 @@
+// publish + subscribe = Observer Pattern
 package org.pattern.behavioral.ObserverPattern;
 
 import org.pattern.behavioral.ObserverPattern.Observable.IphoneObservableImpl;
@@ -8,16 +9,16 @@ import org.pattern.behavioral.ObserverPattern.Observer.NotificationAlertObserver
 
 public class ObserverPatternDemo {
     public static void main(String[] args) {
-        StocksObservable iphoneStockObserver = new IphoneObservableImpl();
+        StocksObservable iphoneStocksObservable = new IphoneObservableImpl();
 
-        NotificationAlertObserver observer1 = new MessageAlertObserverImpl(iphoneStockObserver, "mohnish11");
-        NotificationAlertObserver observer2 = new MessageAlertObserverImpl(iphoneStockObserver, "mohnish21");
-        NotificationAlertObserver observer3 = new EmailAlertObserverImpl(iphoneStockObserver, "moh@ish.com");
+        NotificationAlertObserver observer1 = new MessageAlertObserverImpl(iphoneStocksObservable, "mohnish11");
+        NotificationAlertObserver observer2 = new MessageAlertObserverImpl(iphoneStocksObservable, "mohnish21");
+        NotificationAlertObserver observer3 = new EmailAlertObserverImpl(iphoneStocksObservable, "moh@ish.com");
 
-        iphoneStockObserver.addObserver(observer1);
-        iphoneStockObserver.addObserver(observer2);
-        iphoneStockObserver.addObserver(observer3);
+        iphoneStocksObservable.addObserver(observer1);
+        iphoneStocksObservable.addObserver(observer2);
+        iphoneStocksObservable.addObserver(observer3);
 
-        iphoneStockObserver.setStockCount(10);
+        iphoneStocksObservable.setStockCount(10);
     }
 }

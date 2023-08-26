@@ -1,4 +1,9 @@
-
+/*
+* Why you need Decorator Pattern?
+* Decorator pattern is used to avoid class explosion.
+*
+* Decorator Pattern has both is-a and has-a relationship
+ */
 package org.pattern.structural.DecoratorPattern;
 
 import org.pattern.structural.DecoratorPattern.Pizza.BasePizza;
